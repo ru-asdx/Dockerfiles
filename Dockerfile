@@ -17,4 +17,5 @@ RUN set -x \
 EXPOSE 80 8080 1935 554
 VOLUME ["/etc/flussonic", "/var/log/flussonic", "/srv/storage"]
 
-ENTRYPOINT ["/opt/flussonic/bin/flussonic", "-n", "flussonic@127.0.0.1", "-p", "/var/run/flussonic/pid", "-l", "/var/log/flussonic", "-e", "production"]
+#ENTRYPOINT ["/opt/flussonic/bin/flussonic", "-n", "flussonic@127.0.0.1", "-p", "/var/run/flussonic/pid", "-l", "/var/log/flussonic", "-e", "production"]
+ENTRYPOINT ["service", "flussonic", "run"]
