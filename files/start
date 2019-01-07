@@ -1,0 +1,7 @@
+#!/bin/sh -x
+rm /var/run/fail2ban/fail2ban.sock || true
+touch /var/log/asterisk/security /var/log/asterisk/messages
+chown -R asterisk:asterisk /var/log/asterisk
+
+service fail2ban start
+/usr/sbin/asterisk -v -g -U asterisk
