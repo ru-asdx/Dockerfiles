@@ -4,7 +4,7 @@ FROM debian:stretch-slim
 MAINTAINER asdx "eugene@skorlov.name"
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends ntp iptables procps fail2ban \
+    && apt-get install -y --no-install-recommends curl ntp iptables procps fail2ban \
 	asterisk asterisk-config asterisk-modules asterisk-mp3 asterisk-mysql asterisk-voicemail asterisk-core-sounds-en asterisk-core-sounds-ru \
     && apt-get -y autoremove \
     && apt-get -y clean \
