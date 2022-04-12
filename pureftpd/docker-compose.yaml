@@ -2,8 +2,8 @@ version: '3'
 
 services:
   pureftpd:
-    image: pf1
-    container_name: pure-ftpd
+    image: asdx/pureftpd
+    container_name: pureftpd
 
     ports:
       - "21:21"
