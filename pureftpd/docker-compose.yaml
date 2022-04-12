@@ -9,6 +9,7 @@ services:
       - "21:21"
       - "40000-40010:40000-40010"
     volumes:
+      - "/etc/localtime:/etc/localtime:ro"
       - "./data:/home/ftp"
       - "./cfg:/etc/pureftpd"
 

@@ -10,4 +10,4 @@ VOLUME ["/home/ftp", "/etc/pureftpd/"]
 EXPOSE 21 40000-40010
 
 ENTRYPOINT [ "/sbin/tini", "--" ]
-CMD [ "/pureftpd_run.sh", "-l", "puredb:/etc/pureftpd/pureftpd.pdb", "-E", "-j", "-R" ]
+CMD [ "/pureftpd_run.sh", "-l", "puredb:/etc/pureftpd/pureftpd.pdb", "-E", "-j", "-R", "-A" ]
