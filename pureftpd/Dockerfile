@@ -7,7 +7,7 @@ RUN apk add --update -X http://dl-cdn.alpinelinux.org/alpine/edge/testing pure-f
 COPY pureftpd_run.sh /
 
 VOLUME ["/home/ftp", "/etc/pureftpd/"]
-EXPOSE 21 30000-30010
+EXPOSE 21 40000-40010
 
 ENTRYPOINT [ "/sbin/tini", "--" ]
 CMD [ "/pureftpd_run.sh", "-l", "puredb:/etc/pureftpd/pureftpd.pdb", "-E", "-j", "-R" ]
