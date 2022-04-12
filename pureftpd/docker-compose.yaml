@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  pureftpd:
+    image: pf1
+    container_name: pure-ftpd
+
+    ports:
+      - "21:21"
+      - "40000-40010:40000-40010"
+    volumes:
+      - "./data:/home/ftp"
+      - "./cfg:/etc/pureftpd"
+
+    environment:
+      PUREFTPD_PASSIVE_PORTS: "40000:40010"
+
+    restart: always
